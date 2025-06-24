@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import Navigation from '../components/Navigation.astro';
+import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
 const pageTitle = "Sobre mi";
@@ -30,7 +30,7 @@ const skills = ["Linux", "AWS", "Python", "Terraform", "Docker", "Kubernetes"];
     </style>
   </head>
   <body>
-      <Navigation />
+      <Header />
       
       <h1>Sobre mi</h1>
       <h2>DevOps Engineer </h2>
@@ -50,5 +50,8 @@ const skills = ["Linux", "AWS", "Python", "Terraform", "Docker", "Kubernetes"];
       </ul>
       
       <Footer />
+		  <script>
+			    import "../scripts/menu.js";
+  		</script>
   </body>
 </html>

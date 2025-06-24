@@ -1,20 +1,23 @@
 ---
 import '../styles/global.css';
-import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
 ---
 <html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Projects</title>
+    <title>Proyectos</title>
   </head>
 <body>
-    <Navigation />
+    <Header />
     <h1>Proyectos</h1>
 
     <p>Aca voy a estar mostrando mis proyectos y tambien seguramente las certificaciones que vaya obteniendo a lo largo de este viaje!</p>
     <p>Por ahora, solo tengo un proyecto que es este sitio web, tambien estoy trabajando en mi homelab en donde estara alojado este sitio web.</p>
 
     <Footer />
+    <script>
+      import "../scripts/menu.js";
+    </script>
 </body>
