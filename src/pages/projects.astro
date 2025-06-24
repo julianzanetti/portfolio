@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+const allPosts = await Astro.glob('../pages/posts/*.md');
 ---
 <html lang="es">
   <head>
@@ -15,6 +16,9 @@ import Header from '../components/Header.astro';
 
     <p>Aca voy a estar mostrando mis proyectos y tambien seguramente las certificaciones que vaya obteniendo a lo largo de este viaje!</p>
     <p>Por ahora, solo tengo un proyecto que es este sitio web, tambien estoy trabajando en mi homelab en donde estara alojado este sitio web.</p>
+    <ul>
+       {allPosts.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+    </ul>
 
     <Footer />
     <script>

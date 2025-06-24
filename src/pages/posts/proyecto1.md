@@ -1,15 +1,15 @@
 ---
-title: 'Julian Zanetti | Mi trayectoria en Sistemas y como DevOps Engineer'
-description: 'DevOps Engineer con formación técnica en informática, apasionado en la tecnologia y estudiante continuo.'
+layout: ../../layouts/MarkdownPostLayout.astro
+title: 'PendingTask - Programador de Tareas Web'
+description: 'Aplicacion Web en la cual podemos agregar una tarea, actualizarla y guardarla. Ademas podemos marcarla como completa o incompleta.'
 author: 'Julian Zanetti'
+pubDate: 2025-06-24
 image:
     url: 'https://docs.astro.build/assets/full-logo-light.png'
     alt: 'El logotipo completo de Astro.'
-tags: ["astro", "bloguear", "aprender en público"]
+tags: ["pendingTask", "web", "aplicacion-web"]
 ---
 # Mi primera publicación en el blog
-
-Publicado el: 2022-07-01
 
 ¡Bienvenido a mi _nuevo blog_ sobre el aprendizaje de Astro! Aquí, voy a compartir mi viaje de aprendizaje a medida que construyo un nuevo sitio web.
 
