@@ -1,8 +1,10 @@
 ---
 import '../styles/global.css';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -11,9 +13,9 @@ import '../styles/global.css';
 		<title>Astro</title>
 	</head>
 	<body>
-		<a href="/">Inicio</a>
-		<a href="/projects/">Proyectos</a>
-		<a href="/about/">Sobre mi</a>
+		<Navigation />
 		<h1>Julian Zanetti</h1>
+
+		<Footer />
 	</body>
 </html>

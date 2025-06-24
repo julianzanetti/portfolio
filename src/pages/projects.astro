@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 ---
 <html lang="es">
   <head>
@@ -8,12 +10,11 @@ import '../styles/global.css';
     <title>Projects</title>
   </head>
 <body>
-    <a href="/">Inicio</a>
-    <a href="/projects/">Proyectos</a>
-    <a href="/about/">Sobre mi</a>
-
+    <Navigation />
     <h1>Proyectos</h1>
 
     <p>Aca voy a estar mostrando mis proyectos y tambien seguramente las certificaciones que vaya obteniendo a lo largo de este viaje!</p>
     <p>Por ahora, solo tengo un proyecto que es este sitio web, tambien estoy trabajando en mi homelab en donde estara alojado este sitio web.</p>
+
+    <Footer />
 </body>
