@@ -7,7 +7,7 @@ pubDate: 2025-06-24
 image:
     url: 'https://docs.astro.build/assets/full-logo-light.png'
     alt: 'El logotipo completo de Astro.'
-tags: ["pendingTask", "web", "aplicacion-web"]
+tags: ["pendingTask", "web", "django", "python"]
 ---
 # Mi primera publicación en el blog
 

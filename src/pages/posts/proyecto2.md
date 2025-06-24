@@ -7,5 +7,5 @@ pubDate: 2025-06-24
 image:
     url: 'https://docs.astro.build/assets/full-logo-light.png'
     alt: 'El logotipo completo de Astro.'
-tags: ["homelab", "aws", "kubernetes"]
+tags: ["homelab", "aws", "kubernetes", "docker"]
 ---
