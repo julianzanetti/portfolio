@@ -1,15 +1,17 @@
 ---
-import Hero from '../components/Hero.astro'
 import '../styles/tailwind.css';
+import Navbar from '../components/NavBar.astro';
+import Hero from '../components/Hero.astro';
 ---
 
 <html lang="es">
   <head>
-    <title>Portfolio | Julián Zanetti</title>
+    <title>Inicio | Julián Zanetti</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
-  <body class="bg-[#0d0a2d]">
+  <body class="bg-[#0d0a2d] text-white">
+    <Navbar />
     <Hero />
   </body>
 </html>
