@@ -1,57 +1,15 @@
 ---
-import '../styles/global.css';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-
-const pageTitle = "Sobre mi";
-
-const identity = {
-  firstName: "Julian Zanetti",
-  country: "Argentina",
-  occupation: "Tech Support Senior",
-  hobbies: ["Futbol", "Videojuegos", "Rosario Central"],
-};
-
-const skills = ["Linux", "AWS", "Python", "Terraform", "Docker", "Kubernetes"];
+import '../styles/tailwind.css';
+import AboutMe from '../components/AboutMe.astro';
 ---
+
 <html lang="es">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{pageTitle}</title>
-    <style>
-      h1 {
-        color: blue;
-      }
-      .skill {
-        color: green;
-        font-weight: bold;
-      }
-    </style>
+    <title>Sobre mí | Julián Zanetti</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
-  <body>
-      <Header />
-      
-      <h1>Sobre mi</h1>
-      <h2>DevOps Engineer </h2>
-
-      <p>He aquí algunos datos sobre mí:</p>
-      <ul>
-      <li>Me llamo {identity.firstName}.</li>
-      <li>Vivo en {identity.country} y trabajo como {identity.occupation}.</li>
-      {identity.hobbies.length >= 2 &&
-          <li>Dos de mis grandes aficiones son: {identity.hobbies[0]} y {identity.hobbies[1]}</li>
-          <li>Soy hincha fanatico de {identity.hobbies[2]}</li>
-      }
-      </ul>
-      <p>Mis habilidades son:</p>
-      <ul>
-      {skills.map((skill) => <li class="skill">{skill}</li>)}
-      </ul>
-      
-      <Footer />
-		  <script>
-			    import "../scripts/menu.js";
-  		</script>
+  <body class="bg-[#0d0a2d] text-white">
+    <AboutMe />
   </body>
 </html>
