@@ -1,9 +1,15 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-const pageTitle = "Página de inicio";
+import Hero from '../components/Hero.astro'
+import '../styles/tailwind.css';
 ---
-<BaseLayout pageTitle={pageTitle}>
-  <p>Bienvenido a mi sitio web. Aquí encontrarás información sobre mí y mis proyectos.</p>
-  <p>Esta es la página de inicio, donde puedes navegar a otras secciones.</p>
-  <p>¡Espero que disfrutes tu visita!</p>
-</BaseLayout>
+
+<html lang="es">
+  <head>
+    <title>Portfolio | Julián Zanetti</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body class="bg-[#0d0a2d]">
+    <Hero />
+  </body>
+</html>
