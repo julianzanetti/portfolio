@@ -22,3 +22,9 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# local Astro cache (vite, content collections, etc.)
+.cache/
+
+# system-specific
+Thumbs.db

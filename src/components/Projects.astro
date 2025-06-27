@@ -1,51 +1,37 @@
 ---
+import { getCollection } from 'astro:content';
 const { showMoreButton = true } = Astro.props;
+
+const projects = await getCollection('projects');
+
+// Si querés ordenarlos por fecha (si usás `date` en el frontmatter):
+// projects.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 ---
 <section id="projects" class="bg-[#0d0a2d] text-white py-20 px-6">
   <div class="max-w-6xl mx-auto">
     <h2 class="text-3xl md:text-4xl font-bold text-primary text-center mb-12">Proyectos</h2>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Proyecto 1 -->
-      <div class="bg-[#1e1b4b] rounded-xl p-6 shadow-lg hover:scale-105 transition">
-        <h3 class="text-xl font-bold mb-2 text-primary">Migración a Kubernetes</h3>
-        <p class="text-gray-300 mb-4 text-sm">
-          Migración de aplicaciones legacy a contenedores y despliegue en un clúster de Kubernetes con monitoreo centralizado y CI/CD automatizado.
-        </p>
-        <div class="flex flex-wrap gap-2 text-sm">
-          <span class="bg-[#0d0a2d] text-primary px-3 py-1 rounded-full">Kubernetes</span>
-          <span class="bg-[#0d0a2d] text-primary px-3 py-1 rounded-full">Docker</span>
-          <span class="bg-[#0d0a2d] text-primary px-3 py-1 rounded-full">Grafana</span>
+      {projects.map(({ slug, data }) => (
+        <div class="bg-[#1e1b4b] rounded-xl p-6 shadow-lg hover:scale-105 transition">
+          <h3 class="text-xl font-bold mb-2 text-primary">{data.title}</h3>
+          <p class="text-gray-300 mb-4 text-sm">{data.description}</p>
+          <div class="flex flex-wrap gap-2 text-sm">
+            {data.technologies?.map((tech) => (
+              <span class="bg-[#0d0a2d] text-primary px-3 py-1 rounded-full">{tech}</span>
+            ))}
+          </div>
+          <a
+            href={`/projects/${slug}`}
+            class="block mt-4 text-primary underline text-sm hover:text-[#a29bfe] transition"
+          >
+            Ver más
+          </a>
         </div>
-      </div>
-
-      <!-- Proyecto 2 -->
-      <div class="bg-[#1e1b4b] rounded-xl p-6 shadow-lg hover:scale-105 transition">
-        <h3 class="text-xl font-bold mb-2 text-primary">Infraestructura como código</h3>
-        <p class="text-gray-300 mb-4 text-sm">
-          Automatización del aprovisionamiento de entornos usando Terraform sobre AWS. Módulos reutilizables y control de cambios en Git.
-        </p>
-        <div class="flex flex-wrap gap-2 text-sm">
-          <span class="bg-[#0d0a2d] text-primary px-3 py-1 rounded-full">Terraform</span>
-          <span class="bg-[#0d0a2d] text-primary px-3 py-1 rounded-full">AWS</span>
-          <span class="bg-[#0d0a2d] text-primary px-3 py-1 rounded-full">GitHub Actions</span>
-        </div>
-      </div>
-
-      <!-- Proyecto 3 -->
-      <div class="bg-[#1e1b4b] rounded-xl p-6 shadow-lg hover:scale-105 transition">
-        <h3 class="text-xl font-bold mb-2 text-primary">Dashboard de monitoreo</h3>
-        <p class="text-gray-300 mb-4 text-sm">
-          Desarrollo de dashboards en Prometheus y Grafana para monitoreo de instancias EC2, contenedores y procesos críticos.
-        </p>
-        <div class="flex flex-wrap gap-2 text-sm">
-          <span class="bg-[#0d0a2d] text-primary px-3 py-1 rounded-full">Prometheus</span>
-          <span class="bg-[#0d0a2d] text-primary px-3 py-1 rounded-full">Grafana</span>
-          <span class="bg-[#0d0a2d] text-primary px-3 py-1 rounded-full">Linux</span>
-        </div>
-      </div>
+      ))}
     </div>
   </div>
+
   {showMoreButton && (
     <div class="text-center mt-12">
       <a
