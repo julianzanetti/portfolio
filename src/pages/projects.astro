@@ -2,6 +2,7 @@
 import '../styles/tailwind.css';
 import NavBar from '../components/NavBar.astro';
 import ProjectsComponent from '../components/Projects.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <html lang="es">
@@ -10,8 +11,11 @@ import ProjectsComponent from '../components/Projects.astro';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
-  <body class="bg-[#0d0a2d] text-white">
+  <body class="bg-[#0d0a2d] text-white flex flex-col min-h-screen">
     <NavBar />
-    <ProjectsComponent showMoreButton={false} />
+    <main class="flex-grow">
+      <ProjectsComponent showMoreButton={false} />
+    </main>
+    <Footer />
   </body>
 </html>
