@@ -1,9 +1,23 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-const pageTitle = "Página de inicio";
+import '../styles/tailwind.css';
+import Navbar from '../components/NavBar.astro';
+import Hero from '../components/Hero.astro';
+import Experience from '../components/Experience.astro';
+import Projects from '../components/Projects.astro';
+import Footer from '../components/Footer.astro';
 ---
-<BaseLayout pageTitle={pageTitle}>
-  <p>Bienvenido a mi sitio web. Aquí encontrarás información sobre mí y mis proyectos.</p>
-  <p>Esta es la página de inicio, donde puedes navegar a otras secciones.</p>
-  <p>¡Espero que disfrutes tu visita!</p>
-</BaseLayout>
+
+<html lang="es">
+  <head>
+    <title>Inicio | Julián Zanetti</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body class="bg-[#0d0a2d] text-white">
+    <Navbar />
+    <Hero />
+    <Experience />
+    <Projects showMoreButton={true} />
+    <Footer />
+  </body>
+</html>

@@ -1,17 +1,15 @@
 ---
-import Social from "./Social.astro"
+import SocialIcons from './SocialIcons.jsx';
 ---
 
-<style>
-  footer {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-</style>
+<footer class="bg-gradient-to-br from-[#0d0a2d] to-[#1e1b4b] text-white py-10 mt-20">
+  <div class="max-w-4xl mx-auto text-center px-6">
+    <h3 class="text-xl font-semibold mb-4 text-primary">¡Gracias por visitar!</h3>
 
-<footer>
-    <Social platform="twitter" username="julianzanetti99" />
-    <Social platform="github" username="julianzanetti" />
-    <a href={`https://www.linkedin.com/in/julian-zanetti/`} style="padding: 0.5rem 1rem; color: white; background-color: #4c1d95; text-decoration: none;">linkedin</a>
+    <SocialIcons client:load />
+
+    <p class="text-sm text-gray-400">
+      &copy; 2025 Julián Zanetti. Todos los derechos reservados.
+    </p>
+  </div>
 </footer>
