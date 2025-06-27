@@ -1,4 +1,5 @@
 ---
+const { showMoreButton = true } = Astro.props;
 ---
 <section id="projects" class="bg-[#0d0a2d] text-white py-20 px-6">
   <div class="max-w-6xl mx-auto">
@@ -45,4 +46,14 @@
       </div>
     </div>
   </div>
+  {showMoreButton && (
+    <div class="text-center mt-12">
+      <a
+        href="/projects"
+        class="inline-block bg-primary text-white px-6 py-3 rounded-md font-semibold hover:bg-[#a29bfe] transition"
+      >
+        Ver todos los proyectos
+      </a>
+    </div>
+  )}
 </section>
