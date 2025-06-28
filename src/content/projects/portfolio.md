@@ -5,6 +5,7 @@ technologies:
   - Astro
   - Preact
   - TailwindCSS
+type: "proyecto"
 cover: "/images/portfolio.png"
 githubUrl: "https://github.com/julianzanetti/portfolio"
 ---

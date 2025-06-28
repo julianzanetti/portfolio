@@ -4,6 +4,8 @@ description: "Curso práctico con mas de 20 Demos aplicadas en el mundo real."
 technologies:
   - Terraform
   - AWS
+type: "curso"
+status: "en-progreso"
 cover: "/images/terraform-cover.png"
 githubUrl: "https://github.com/julianzanetti/Terraform-AWS-Udemy"
 ---
