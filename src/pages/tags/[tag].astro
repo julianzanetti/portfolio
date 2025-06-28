@@ -1,0 +1,76 @@
+---
+import { getCollection } from 'astro:content';
+import NavBar from '../../components/NavBar.astro';
+import Footer from '../../components/Footer.astro';
+
+// ⭐ ESTA FUNCIÓN GENERA LAS PÁGINAS DINÁMICAS COMO /tags/AWS o /tags/Kubernetes
+export async function getStaticPaths() {
+  const allProjects = await getCollection('projects');
+
+  const allTags = new Set<string>();
+  for (const project of allProjects) {
+    const tags = project.data.technologies || [];
+    tags.forEach((tag: string) => allTags.add(tag));
+  }
+
+  return Array.from(allTags).map((tag) => ({
+    params: { tag },
+  }));
+}
+
+// 🚀 Usamos el parámetro de la URL para filtrar proyectos
+const { tag } = Astro.params;
+const allProjects = await getCollection('projects');
+
+const filteredProjects = allProjects.filter((project) =>
+  project.data.technologies?.includes(tag)
+);
+---
+
+<html lang="es">
+  <head>
+    <title>Proyectos con {tag} | Julián Zanetti</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body class="bg-[#0d0a2d] text-white">
+    <NavBar />
+
+    <section class="py-20 px-6 max-w-6xl mx-auto">
+      <h1 class="text-3xl font-bold text-primary mb-8 text-center">
+        Proyectos con tecnología: {tag}
+      </h1>
+
+      {filteredProjects.length === 0 ? (
+        <p class="text-center text-gray-400">No se encontraron proyectos con esta tecnología.</p>
+      ) : (
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredProjects.map(({ slug, data }) => (
+            <div class="bg-[#1e1b4b] rounded-xl p-6 shadow-lg hover:scale-105 transition">
+              <h3 class="text-xl font-bold mb-2 text-primary">{data.title}</h3>
+              <p class="text-gray-300 mb-4 text-sm">{data.description}</p>
+              <div class="flex flex-wrap gap-2 text-sm mb-2">
+                {data.technologies?.map((tech) => (
+                  <a
+                    href={`/tags/${tech}`}
+                    class="bg-[#0d0a2d] text-primary px-3 py-1 rounded-full hover:underline"
+                  >
+                    {tech}
+                  </a>
+                ))}
+              </div>
+              <a
+                href={`/projects/${slug}`}
+                class="block mt-2 text-primary underline text-sm hover:text-[#a29bfe] transition"
+              >
+                Ver más
+              </a>
+            </div>
+          ))}
+        </div>
+      )}
+    </section>
+
+    <Footer />
+  </body>
+</html>
