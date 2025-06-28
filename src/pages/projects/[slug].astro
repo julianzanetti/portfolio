@@ -1,26 +1,25 @@
 ---
-import { getCollection, getEntry } from 'astro:content';
+import { getCollection, getEntry, render } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
+import { AstroError } from 'astro/errors';
 import ProjectLayout from '../../layouts/ProjectLayout.astro';
 
-// Define todos los slugs que deben tener página
 export async function getStaticPaths() {
   const allProjects = await getCollection('projects');
-
   return allProjects.map((project) => ({
     params: { slug: project.slug },
   }));
 }
 
-// Obtené los datos del proyecto según el slug
 const { slug } = Astro.params;
-const project: CollectionEntry<'projects'> | undefined = await getEntry('projects', slug);
+const project = await getEntry('projects', slug);
 
 if (!project) {
-  throw new Error(`Proyecto no encontrado: ${slug}`);
+  throw new AstroError(`Proyecto no encontrado: ${slug}`);
 }
 
-const { data, body } = project;
+const { Content } = await render(project);
+const { data } = project;
 ---
 
 <ProjectLayout title={data.title}>
@@ -35,8 +34,8 @@ const { data, body } = project;
 
   {data.cover && <img src={data.cover} alt={data.title} class="rounded-lg mb-6 mx-auto" />}
 
-  <article class="prose prose-invert">
-    {body}
+  <article class="prose prose-invert max-w-none">
+    <Content />
   </article>
 
   {data.githubUrl && (
