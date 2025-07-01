@@ -4,8 +4,8 @@ description: "Curso práctico de 20 secciones y mas de 27 horas de videos."
 technologies:
   - Kubernetes
   - Docker
-  - AWS
-  - Azure
+  - AWS EKS
+  - Azure AKS
 type: "curso"
 status: "finalizado"
 cover: "/images/kubernetes.png"

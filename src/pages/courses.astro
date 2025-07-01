@@ -24,60 +24,105 @@ const cursosEnProgreso = allItems.filter(
   <body class="bg-[#0d0a2d] text-white flex flex-col min-h-screen">
     <NavBar />
     <main class="flex-grow py-20 px-6 max-w-6xl mx-auto">
-
       <h1 class="text-4xl font-bold text-primary text-center mb-16">Cursos</h1>
 
       {cursosFinalizados.length > 0 && (
-        <>
-          <h2 class="text-2xl font-bold text-primary mb-8">Finalizados</h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {cursosFinalizados.map(({ slug, data }) => (
-              <div class="bg-[#1e1b4b] rounded-xl p-6 shadow-lg hover:scale-105 transition">
-                <h3 class="text-xl font-bold mb-2 text-primary">{data.title}</h3>
-                <p class="text-gray-300 mb-4 text-sm">{data.description}</p>
-                <div class="flex flex-wrap gap-2 text-sm">
-                  {data.technologies?.map((tech) => (
-                    <span class="bg-[#0d0a2d] text-primary px-3 py-1 rounded-full">{tech}</span>
-                  ))}
+        <section class="relative mb-16">
+          <h2 class="text-2xl font-bold text-primary mb-4">Finalizados</h2>
+
+          <button
+            id="finalizados-prev"
+            class="absolute top-1/2 -left-8 transform -translate-y-1/2 bg-primary rounded-full w-8 h-8 flex items-center justify-center disabled:opacity-50"
+            aria-label="Anterior"
+          >
+            &#8592;
+          </button>
+
+          <button
+            id="finalizados-next"
+            class="absolute top-1/2 -right-8 transform -translate-y-1/2 bg-primary rounded-full w-8 h-8 flex items-center justify-center disabled:opacity-50"
+            aria-label="Siguiente"
+          >
+            &#8594;
+          </button>
+
+          <div
+            id="finalizados-container"
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {cursosFinalizados.map(({ slug, data }, index) => (
+              <div class="curso-card" data-index={index}>
+                <div class="bg-[#1e1b4b] rounded-xl p-6 shadow-lg hover:scale-105 transition">
+                  <h3 class="text-xl font-bold mb-2 text-primary">{data.title}</h3>
+                  <p class="text-gray-300 mb-4 text-sm">{data.description}</p>
+                  <div class="flex flex-wrap gap-2 text-sm">
+                    {data.technologies?.map((tech) => (
+                      <span class="bg-[#0d0a2d] text-primary px-3 py-1 rounded-full">{tech}</span>
+                    ))}
+                  </div>
+                  <a
+                    href={`/projects/${slug}`}
+                    class="block mt-4 text-primary underline text-sm hover:text-[#a29bfe] transition"
+                  >
+                    Ver más
+                  </a>
                 </div>
-                <a
-                  href={`/projects/${slug}`}
-                  class="block mt-4 text-primary underline text-sm hover:text-[#a29bfe] transition"
-                >
-                  Ver más
-                </a>
               </div>
             ))}
           </div>
-        </>
+        </section>
       )}
 
       {cursosEnProgreso.length > 0 && (
-        <>
-          <h2 class="text-2xl font-bold text-primary mb-8">En progreso</h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {cursosEnProgreso.map(({ slug, data }) => (
-              <div class="bg-[#1e1b4b] rounded-xl p-6 shadow-lg hover:scale-105 transition">
-                <h3 class="text-xl font-bold mb-2 text-primary">{data.title}</h3>
-                <p class="text-gray-300 mb-4 text-sm">{data.description}</p>
-                <div class="flex flex-wrap gap-2 text-sm">
-                  {data.technologies?.map((tech) => (
-                    <span class="bg-[#0d0a2d] text-primary px-3 py-1 rounded-full">{tech}</span>
-                  ))}
+        <section class="relative">
+          <h2 class="text-2xl font-bold text-primary mb-4">En progreso</h2>
+
+          <button
+            id="enprogreso-prev"
+            class="absolute top-1/2 -left-8 transform -translate-y-1/2 bg-primary rounded-full w-8 h-8 flex items-center justify-center disabled:opacity-50"
+            aria-label="Anterior"
+          >
+            &#8592;
+          </button>
+
+          <button
+            id="enprogreso-next"
+            class="absolute top-1/2 -right-8 transform -translate-y-1/2 bg-primary rounded-full w-8 h-8 flex items-center justify-center disabled:opacity-50"
+            aria-label="Siguiente"
+          >
+            &#8594;
+          </button>
+
+          <div
+            id="enprogreso-container"
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {cursosEnProgreso.map(({ slug, data }, index) => (
+              <div class="curso-card" data-index={index}>
+                <div class="bg-[#1e1b4b] rounded-xl p-6 shadow-lg hover:scale-105 transition">
+                  <h3 class="text-xl font-bold mb-2 text-primary">{data.title}</h3>
+                  <p class="text-gray-300 mb-4 text-sm">{data.description}</p>
+                  <div class="flex flex-wrap gap-2 text-sm">
+                    {data.technologies?.map((tech) => (
+                      <span class="bg-[#0d0a2d] text-primary px-3 py-1 rounded-full">{tech}</span>
+                    ))}
+                  </div>
+                  <a
+                    href={`/projects/${slug}`}
+                    class="block mt-4 text-primary underline text-sm hover:text-[#a29bfe] transition"
+                  >
+                    Ver más
+                  </a>
                 </div>
-                <a
-                  href={`/projects/${slug}`}
-                  class="block mt-4 text-primary underline text-sm hover:text-[#a29bfe] transition"
-                >
-                  Ver más
-                </a>
               </div>
             ))}
           </div>
-        </>
+        </section>
       )}
 
     </main>
     <Footer />
+
+    <script type="module" src="/scripts/paginacionCursos.js" defer></script>
   </body>
 </html>
