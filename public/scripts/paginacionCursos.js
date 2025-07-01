@@ -1,17 +1,18 @@
-function setupPaginacion(containerId, btnPrevId, btnNextId, itemsPerPage = 3) {
+function setupPaginacion(containerId, btnPrevId, btnNextId, pageIndicatorId, storageKey, itemsPerPage = 3) {
   const container = document.getElementById(containerId);
   const btnPrev = document.getElementById(btnPrevId);
   const btnNext = document.getElementById(btnNextId);
-  if (!container || !btnPrev || !btnNext) return;
+  const pageIndicator = document.getElementById(pageIndicatorId);
+
+  if (!container || !btnPrev || !btnNext || !pageIndicator) return;
 
   let items = [];
+  let currentPage = parseInt(localStorage.getItem(storageKey)) || 0;
+  let totalPages = 0;
 
   function updateItems() {
     items = Array.from(container.children);
   }
-
-  let currentPage = 0;
-  let totalPages = 0;
 
   function showPage(page) {
     updateItems();
@@ -22,25 +23,38 @@ function setupPaginacion(containerId, btnPrevId, btnNextId, itemsPerPage = 3) {
     const start = currentPage * itemsPerPage;
     const end = start + itemsPerPage;
 
-    items.forEach((item, index) => {
-      item.style.display = index >= start && index < end ? '' : 'none';
-    });
+    // Transición: ocultar con opacidad
+    container.style.opacity = 0;
 
-    btnPrev.disabled = currentPage === 0;
-    btnNext.disabled = currentPage >= totalPages - 1;
+    setTimeout(() => {
+      items.forEach((item, index) => {
+        item.style.display = index >= start && index < end ? '' : 'none';
+      });
+
+      container.style.opacity = 1;
+
+      btnPrev.disabled = currentPage === 0;
+      btnNext.disabled = currentPage >= totalPages - 1;
+
+      pageIndicator.textContent = `${currentPage + 1} / ${totalPages}`;
+
+      // Guardamos el estado
+      localStorage.setItem(storageKey, currentPage);
+    }, 150); // duración de la transición
   }
 
   btnPrev.addEventListener('click', () => showPage(currentPage - 1));
   btnNext.addEventListener('click', () => showPage(currentPage + 1));
 
-  // Aseguramos que se ejecute al final del DOM (mejor que defer solo)
+  // Inicializar
   window.requestAnimationFrame(() => {
     updateItems();
-    showPage(0);
+    container.style.transition = 'opacity 0.3s ease';
+    showPage(currentPage);
   });
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-  setupPaginacion('finalizados-container', 'finalizados-prev', 'finalizados-next', 3);
-  setupPaginacion('enprogreso-container', 'enprogreso-prev', 'enprogreso-next', 3);
+  setupPaginacion('finalizados-container', 'finalizados-prev', 'finalizados-next', 'finalizados-page', 'page-finalizados', 3);
+  setupPaginacion('enprogreso-container', 'enprogreso-prev', 'enprogreso-next', 'enprogreso-page', 'page-enprogreso', 3);
 });
