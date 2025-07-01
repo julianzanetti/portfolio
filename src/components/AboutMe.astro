@@ -1,4 +1,16 @@
 ---
+const stack = [
+  { name: 'Linux', slug: 'Linux', icon: '/icons/linux.svg' },
+  { name: 'Docker', slug: 'Docker', icon: '/icons/docker.svg' },
+  { name: 'Kubernetes', slug: 'Kubernetes', icon: '/icons/kubernetes.svg' },
+  { name: 'AWS', slug: 'AWS', icon: '/icons/aws.svg' },
+  { name: 'Terraform', slug: 'Terraform', icon: '/icons/terraform.svg' },
+  { name: 'Bash', slug: 'Bash', icon: '/icons/bash.svg' },
+  { name: 'Python', slug: 'Python', icon: '/icons/python.svg' },
+  { name: 'Jenkins', slug: 'Jenkins', icon: '/icons/jenkins.svg' },
+  { name: 'Git', slug: 'Git', icon: '/icons/git.svg' },
+  { name: 'Grafana', slug: 'Grafana', icon: '/icons/grafana.svg' }
+];
 ---
 <section id="about" class="bg-[#0d0a2d] text-white py-20 px-6">
   <div class="max-w-4xl mx-auto text-center">
@@ -12,17 +24,18 @@
       En la actualidad me estoy desempeñando como SysAdmin Linux y DBA Progress 4GL, gestionando infraestructuras tanto en la nube como on-premises. Tengo experiencia en automatización de tareas, monitoreo, infraestructura como código y despliegue continuo. Comprometido con mi mejora continua, me capacito activamente en AWS, Docker, Kubernetes, Terraform y buenas prácticas DevOps. Actualmente me estoy preparando para obtener la certificación AWS Certified Solutions Architect – Associate.
     </p>
 
-    <h3 class="text-xl font-semibold text-primary mb-4">Skills técnicas</h3>
-    <div class="flex flex-wrap justify-center gap-3">
-      <span class="bg-[#1e1b4b] text-primary px-4 py-2 rounded-full text-sm font-medium shadow">Linux</span>
-      <span class="bg-[#1e1b4b] text-primary px-4 py-2 rounded-full text-sm font-medium shadow">Docker</span>
-      <span class="bg-[#1e1b4b] text-primary px-4 py-2 rounded-full text-sm font-medium shadow">Kubernetes</span>
-      <span class="bg-[#1e1b4b] text-primary px-4 py-2 rounded-full text-sm font-medium shadow">AWS</span>
-      <span class="bg-[#1e1b4b] text-primary px-4 py-2 rounded-full text-sm font-medium shadow">Terraform</span>
-      <span class="bg-[#1e1b4b] text-primary px-4 py-2 rounded-full text-sm font-medium shadow">Bash</span>
-      <span class="bg-[#1e1b4b] text-primary px-4 py-2 rounded-full text-sm font-medium shadow">Python</span>
-      <span class="bg-[#1e1b4b] text-primary px-4 py-2 rounded-full text-sm font-medium shadow">GitHub Actions</span>
-      <span class="bg-[#1e1b4b] text-primary px-4 py-2 rounded-full text-sm font-medium shadow">Jenkins</span>
+    <h3 class="text-xl font-semibold text-primary mb-6">Mi stack tecnológico</h3>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 justify-items-center">
+      {stack.map((tech) => (
+        <a
+          href={`/tags/${tech.slug}`}
+          class="flex flex-col items-center bg-[#1e1b4b] p-4 rounded-xl hover:scale-105 transition text-center shadow-lg w-32"
+        >
+          <img src={tech.icon} alt={tech.name} class="w-12 h-12 mb-2" />
+          <span class="text-white text-sm font-medium">{tech.name}</span>
+        </a>
+      ))}
     </div>
   </div>
 </section>
