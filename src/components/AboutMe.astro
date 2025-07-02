@@ -14,33 +14,79 @@ const stack = [
   { name: 'GitHub Actions', slug: 'Github-Actions', icon: '/icons/githubactions.svg' }
 ];
 ---
+
 <section id="about" class="bg-[#0d0a2d] text-white py-20 px-6">
   <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary">Sobre mí</h2>
+    <!-- Foto -->
+    <img
+      src="/public/profile.jpg"
+      alt="Foto de Julián Zanetti"
+      class="w-32 h-32 mx-auto rounded-full border-4 border-primary mb-6"
+    />
 
-    <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
-      DevOps Engineer con formación técnica en informática y más de 4 años de experiencia en Soporte Tecnico y Administración de sistemas Linux.
+    <!-- Nombre + Título -->
+    <h1 class="text-4xl font-bold text-primary mb-2">Julián Zanetti</h1>
+    <p class="text-lg text-gray-300 mb-10">
+      DevOps Engineer | Tech Support Sr | SysAdmin Linux.
     </p>
 
-    <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
-      Actualmente trabajo como Linux SysAdmin y administrador de bases de datos Progress 4GL, gestionando entornos de producción tanto on-premise como en la nube. Me encargo de tareas como migraciones de datos, mantenimiento de sistemas y automatización de procesos.
-      Me centro en la automatización, la monitorización, la infraestructura como código y el despliegue continuo, con el objetivo de mejorar la eficiencia operativa y la fiabilidad.
-      Me apasiona la tecnología y estoy comprometido con el aprendizaje continuo. Actualmente estoy ampliando mis habilidades en AWS, Docker, Kubernetes, Terraform, y las prácticas modernas de DevOps y Cloud Engineering.
-      Actualmente me estoy preparando para obtener la certificación AWS Certified Solutions Architect – Associate.
-    </p>
+    <!-- Bloque profesional -->
+    <div class="text-left space-y-6 text-gray-300 text-base leading-relaxed">
+      <div>
+        <h2 class="text-2xl font-bold text-primary border-b border-gray-700 pb-2 mb-4">Perfil profesional</h2>
+        <p>
+          Actualmente me desempeño como <strong>SysAdmin Linux</strong> y <strong>DBA Progress 4GL</strong>, con más de 4 años de experiencia en la gestión de servidores y sistemas tanto en entornos on-premise como en la nube. 
+          Trabajo diariamente con herramientas como <strong>AWS</strong>, <strong>Docker</strong>, <strong>Kubernetes</strong> y <strong>Terraform</strong>, aplicando principios de DevOps, CI/CD y automatización de infraestructura.
+        </p>
+        <p>
+          Estoy en constante formación y crecimiento profesional, actualmente preparándome para la certificación <strong>AWS Certified Solutions Architect – Associate</strong>.
+        </p>
+      </div>
 
-    <h3 class="text-xl font-semibold text-primary mb-6">Mi stack tecnológico</h3>
+      <!-- Certificaciones -->
+      <div>
+        <h2 class="text-2xl font-bold text-primary border-b border-gray-700 pb-2 mb-4">Certificaciones</h2>
+        <div class="flex flex-wrap justify-center gap-6">
+          <!-- Certificación AWS (próxima) -->
+          <a href="https://www.credly.com/" target="_blank" class="flex flex-col items-center">
+            <img src="/certs/aws-sa-associate.svg" alt="AWS SAA" class="w-20 h-20 mb-2" />
+            <span class="text-sm text-white">AWS SAA</span>
+          </a>
 
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 justify-items-center">
+          <!-- Certificación DevOps Bootcamp -->
+          <a href="/certs/devops-bootcamp.pdf" target="_blank" class="flex flex-col items-center">
+            <img src="/certs/devops-badge.png" alt="Bootcamp DevOps" class="w-20 h-20 mb-2 rounded-md shadow" />
+            <span class="text-sm text-white">DevOps Engineer</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Personal -->
+      <div>
+        <h2 class="text-2xl font-bold text-primary border-b border-gray-700 pb-2 mb-4">Sobre mí</h2>
+        <p>
+          Soy una persona curiosa, autodidacta y comprometida con cada objetivo que me propongo. Me entusiasma aprender constantemente y descubrir nuevas herramientas para optimizar procesos.
+        </p>
+        <p>
+          En mi tiempo libre disfruto de mirar series (mi favorita es <strong>Breaking Bad</strong>), practicar inglés con inmersión (mirando *Loki*, *The Office* y más), explorar tecnologías nuevas y automatizar todo lo que se pueda 😄. También soy un entusiasta del mundo de la nube, y actualmente estoy construyendo un homelab en AWS con Kubernetes.
+        </p>
+      </div>
+    </div>
+
+    <!-- Stack -->
+    <h2 class="text-2xl font-bold text-primary mt-12 mb-6 border-b border-gray-700 pb-2">Mi stack tecnológico</h2>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 justify-items-center">
       {stack.map((tech) => (
         <a
           href={`/tags/${tech.slug}`}
-          class="flex flex-col items-center bg-[#1e1b4b] p-4 rounded-xl hover:scale-105 transition text-center shadow-lg w-32"
+          class="flex flex-col items-center bg-[#1e1b4b] p-4 rounded-xl hover:scale-105 transition text-center shadow-lg w-28"
         >
-          <img src={tech.icon} alt={tech.name} class="w-12 h-12 mb-2" />
+          <img src={tech.icon} alt={tech.name} class="w-10 h-10 mb-2" />
           <span class="text-white text-sm font-medium">{tech.name}</span>
         </a>
       ))}
     </div>
   </div>
 </section>
+
