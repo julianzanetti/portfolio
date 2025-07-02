@@ -8,6 +8,7 @@ technologies:
 type: "proyecto"
 cover: "/images/portfolio.png"
 githubUrl: "https://github.com/julianzanetti/portfolio"
+featured: true
 ---
 
 "Mi Portfolio" es una plantilla web moderna y minimalista creada para contar sobre mi, mostrar todos los proyectos/cursos que estoy realizando y ya he realizado.

@@ -10,71 +10,68 @@ const allProjects = await getCollection('projects');
 
 // Filtros
 const proyectos = allProjects.filter(p => p.data.type === 'proyecto');
-
-// Aplicar límite si se pide
-const proyectosLimitados = limit ? proyectos.slice(0, limit) : proyectos;
+const proyectosDestacados = proyectos.filter(p => p.data.featured);
 ---
 
 <section id="projects" class="bg-[#0d0a2d] text-white py-20 px-6">
   <div class="max-w-6xl mx-auto">
 
-    {showOnlyProjects
-      ? (
-        <>
-          <h2 class="text-3xl md:text-4xl font-bold text-primary text-center mb-12">
-            Proyectos
-          </h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {proyectosLimitados.map(({ slug, data }) => (
-              <div class="bg-[#1e1b4b] rounded-xl p-6 shadow-lg hover:scale-105 transition">
-                <h3 class="text-xl font-bold mb-2 text-primary">{data.title}</h3>
-                <p class="text-gray-300 mb-4 text-sm">{data.description}</p>
-                <div class="flex flex-wrap gap-2 text-sm">
-                  {data.technologies?.map(tech => (
-                    <span class="bg-[#0d0a2d] text-primary px-3 py-1 rounded-full">{tech}</span>
-                  ))}
-                </div>
-                <a href={`/projects/${slug}`} class="block mt-4 text-primary underline text-sm hover:text-[#a29bfe] transition">
-                  Ver más
-                </a>
+    {showOnlyProjects && proyectosDestacados.length > 0 ? (
+      <>
+        <h2 class="text-3xl md:text-4xl font-bold text-primary text-center mb-12">
+          Proyectos
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {proyectosDestacados.map(({ slug, data }) => (
+            <div class="bg-[#1e1b4b] rounded-xl p-6 shadow-lg hover:scale-105 transition">
+              <h3 class="text-xl font-bold mb-2 text-primary">{data.title}</h3>
+              <p class="text-gray-300 mb-4 text-sm">{data.description}</p>
+              <div class="flex flex-wrap gap-2 text-sm">
+                {data.technologies?.map(tech => (
+                  <span class="bg-[#0d0a2d] text-primary px-3 py-1 rounded-full">{tech}</span>
+                ))}
               </div>
-            ))}
-          </div>
-
-          {showMoreButton && (
-            <div class="text-center mt-12">
-              <a
-                href="/projects"
-                class="inline-block bg-primary text-white px-6 py-3 rounded-md font-semibold hover:bg-[#a29bfe] transition"
-              >
-                Ver todos los proyectos
+              <a href={`/projects/${slug}`} class="block mt-4 text-primary underline text-sm hover:text-[#a29bfe] transition">
+                Ver más
               </a>
             </div>
-          )}
-        </>
-      ) : (
-        <>
-          <!-- Bloque PROYECTOS -->
-          <h2 class="text-3xl md:text-4xl font-bold text-primary text-center mb-12">
-            Proyectos
-          </h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {proyectos.map(({ slug, data }) => (
-              <div class="bg-[#1e1b4b] rounded-xl p-6 shadow-lg hover:scale-105 transition">
-                <h3 class="text-xl font-bold mb-2 text-primary">{data.title}</h3>
-                <p class="text-gray-300 mb-4 text-sm">{data.description}</p>
-                <div class="flex flex-wrap gap-2 text-sm">
-                  {data.technologies?.map(tech => (
-                    <span class="bg-[#0d0a2d] text-primary px-3 py-1 rounded-full">{tech}</span>
-                  ))}
-                </div>
-                <a href={`/projects/${slug}`} class="block mt-4 text-primary underline text-sm hover:text-[#a29bfe] transition">
-                  Ver más
-                </a>
-              </div>
-            ))}
+          ))}
+        </div>
+
+        {showMoreButton && (
+          <div class="text-center mt-12">
+            <a
+              href="/projects"
+              class="inline-block bg-primary text-white px-6 py-3 rounded-md font-semibold hover:bg-[#a29bfe] transition"
+            >
+              Ver todos los proyectos
+            </a>
           </div>
-        </>
-      )}
+        )}
+      </>
+    ) : (
+      <>
+        <!-- Bloque PROYECTOS -->
+        <h2 class="text-3xl md:text-4xl font-bold text-primary text-center mb-12">
+          Proyectos
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {proyectos.map(({ slug, data }) => (
+            <div class="bg-[#1e1b4b] rounded-xl p-6 shadow-lg hover:scale-105 transition">
+              <h3 class="text-xl font-bold mb-2 text-primary">{data.title}</h3>
+              <p class="text-gray-300 mb-4 text-sm">{data.description}</p>
+              <div class="flex flex-wrap gap-2 text-sm">
+                {data.technologies?.map(tech => (
+                  <span class="bg-[#0d0a2d] text-primary px-3 py-1 rounded-full">{tech}</span>
+                ))}
+              </div>
+              <a href={`/projects/${slug}`} class="block mt-4 text-primary underline text-sm hover:text-[#a29bfe] transition">
+                Ver más
+              </a>
+            </div>
+          ))}
+        </div>
+      </>
+    )}
   </div>
 </section>

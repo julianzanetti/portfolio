@@ -9,6 +9,7 @@ export const projects = defineCollection({
     githubUrl: z.string().optional(),
     type: z.enum(['proyecto', 'curso']),
     status: z.enum(['finalizado', 'en-progreso']).optional(),
+    featured: z.boolean().optional(),
   }),
 });
 
