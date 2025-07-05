@@ -1,47 +1,86 @@
-# Astro Starter Kit: Minimal
+<h1 align="center">💻 Personal Portfolio</h1>
+<p align="center">
+  A clean, minimal, and fully responsive portfolio built with <strong>Astro</strong> and <strong>TailwindCSS</strong>, where I showcase my projects, courses, and experience as a <strong>DevOps Engineer.</strong>
+</p>
+<p align="center">
+  <a href="https://julianzanetti.dev" target="_blank"><strong>🌐 Live Demo</strong></a>
+</p>
 
-```sh
-npm create astro@latest -- --template minimal
+---
+
+## ✨ Portfolio Features
+
+- ⚡ Built with **Astro**
+- 💅 Styled using **TailwindCSS**
+- 🌓 Dark-themed, clean UI design
+- 📱 Fully responsive layout
+- 🔁 Reusable and modular components
+- 📚 Dynamic content system using Markdown
+- 🐳 Docker-ready for local deployment
+- ⚙️ Integrated with **GitHub Actions** for CI/CD
+
+---
+
+## 🛠️ Technologies Used
+
+- 🚀 **Astro**  
+- 🎨 **TailwindCSS**  
+- 🧠 **TypeScript**  
+- ⚙️ **Vite**  
+- 🗂️ **Markdown** (for dynamic content)  
+- 🐳 **Docker**  
+- 🛠️ **GitHub Actions**  
+- 🔄 **CI/CD workflow**  
+- ☁️ **Vercel** (deployment)
+
+---
+
+## 📂 Project Structure
+
+Projects and courses are defined in Markdown files within the `content/` folder. This allows easy creation and maintenance of portfolio entries.
+```
+portfolio/
+├── content/
+│ ├── projects/
+│ └── courses/
+├── components/
+├── layouts/
+└── pages/
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+---
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🧪 Local Installation
 
-## 🚀 Project Structure
+### Using Node.js
 
-Inside of your Astro project, you'll see the following folders and files:
+```bash
+# Clone the repo
+git clone https://github.com/julianzanetti/portfolio.git
+cd portfolio
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### Using Docker
+```bash
+# Build Docker image
+docker build -t julianzanetti/portfolio .
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+# Run the container
+docker run -p 80:80 julianzanetti/portfolio
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+---
 
-## 🧞 Commands
+## 🔄 GitHub Actions
+This project uses GitHub Actions to automatically build and validate the site on every push. You’ll find the workflow file under .github/workflows/.
 
-All commands are run from the root of the project, from a terminal:
+---
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 📄 License
+This project is licensed under the MIT License - see the LICENSE file for details.
