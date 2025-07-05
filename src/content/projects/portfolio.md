@@ -7,6 +7,7 @@ technologies:
   - TailwindCSS
   - Docker
   - Nginx
+  - GitHub-Actions
 type: "proyecto"
 cover: "/images/portfolio.png"
 githubUrl: "https://github.com/julianzanetti/portfolio"
