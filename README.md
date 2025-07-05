@@ -51,9 +51,7 @@ portfolio/
 ---
 
 ## 🧪 Local Installation
-
-### Using Node.js
-
+### ▶️ Using Node.js
 ```bash
 # Clone the repo
 git clone https://github.com/julianzanetti/portfolio.git
@@ -66,14 +64,25 @@ npm install
 npm run dev
 ```
 
-### Using Docker
+### ▶️ Using Docker (pull prebuilt image)
 ```bash
-# Build Docker image
+# Pull the latest image from GitHub Container Registry
+docker pull julianzanetti/portfolio:latest
+
+# Run the container
+docker run -p 80:80 julianzanetti/portfolio:latest
+```
+
+### 🛠️ Using Docker (build manually)
+```bash
+# Build Docker image locally
 docker build -t julianzanetti/portfolio .
 
 # Run the container
 docker run -p 80:80 julianzanetti/portfolio
 ```
+
+Then open your browser and visit `http://localhost:80`.
 
 ---
 
