@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 export default function SocialIcons() {
   return (
-    <div className="flex justify-center gap-6 mb-4 text-2xl">
+    <div className="flex justify-center gap-6 mb-2 text-2xl">
       <a
         href="https://github.com/julianzanetti"
         target="_blank"
