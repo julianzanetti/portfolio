@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+concurrency:
+  group: 'docker-build-portfolio'
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -29,3 +33,5 @@ jobs:
           push: true
           tags: julianzanetti/portfolio:latest
           platforms: linux/amd64,linux/arm64
+          cache-from: type=registry,ref=julianzanetti/portfolio:cache
+          cache-to: type=registry,ref=julianzanetti/portfolio:cache,mode=max
