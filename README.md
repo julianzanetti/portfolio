@@ -3,7 +3,7 @@
   A clean, minimal, and fully responsive portfolio built with <strong>Astro</strong> and <strong>TailwindCSS</strong>, where I showcase my projects, courses, and experience as a <strong>DevOps Engineer.</strong>
 </p>
 <p align="center">
-  <a href="https://julianzanetti.dev" target="_blank"><strong>🌐 Live Demo</strong></a>
+  <a href="https://julianzanetti-lab.com" target="_blank"><strong>🌐 Live Demo</strong></a>
 </p>
 
 ---
