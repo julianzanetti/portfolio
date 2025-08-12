@@ -1,37 +1,53 @@
-name: Build and Push Docker Image
+name: Build & Push Docker Image
 
 on:
   push:
     branches:
       - main
-
-concurrency:
-  group: 'docker-build-portfolio'
-  cancel-in-progress: true
+  workflow_dispatch:
+    inputs:
+      arch:
+        description: "Arquitectura para compilar (amd64 o multi)"
+        required: true
+        default: "amd64"
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-
-      - name: Login to Docker Hub
-        uses: docker/login-action@v3
+      - name: Cache node modules
+        uses: actions/cache@v3
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
-      - name: Build and push Docker image (multi-arch)
+      - uses: docker/setup-buildx-action@v3
+
+      - uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Set target platforms
+        id: set-platform
+        run: |
+          if [ "${{ github.event.inputs.arch }}" = "multi" ]; then
+            echo "PLATFORMS=linux/amd64,linux/arm64" >> $GITHUB_ENV
+          else
+            echo "PLATFORMS=linux/amd64" >> $GITHUB_ENV
+          fi
+
+      - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
           context: .
           push: true
           tags: julianzanetti/portfolio:latest
-          platforms: linux/amd64,linux/arm64
+          platforms: ${{ env.PLATFORMS }}
           cache-from: type=registry,ref=julianzanetti/portfolio:cache
           cache-to: type=registry,ref=julianzanetti/portfolio:cache,mode=max
