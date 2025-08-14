@@ -1,6 +1,6 @@
 ---
 title: "My DevOps Homelab"
-description: "My DevOps homelab deployed on AWS with Terraform and managed with k3s."
+description: "My DevOps homelab deployed on AWS with Terraform and managed with Kubernetes (k3s) and GitOps configuration with ArgoCD."
 technologies:
   - AWS
   - Kubernetes

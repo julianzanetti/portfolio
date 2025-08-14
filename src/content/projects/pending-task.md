@@ -44,7 +44,7 @@ featured: true
 
 ## 🌐 Demo en vivo
 
-👉 [Ver demostración en directo](aquí-va-tu-link-de-demo) *(próximamente)*
+👉 [Ver demostración en directo](https://pendingtask.julianzanetti-lab.com/)
 
 ---
 
