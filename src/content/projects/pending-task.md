@@ -9,7 +9,7 @@ technologies:
   - Kubernetes
   - Bash
 type: "proyecto"
-cover: "/images/portfolio.png"
+cover: "/images/pendingtask.png"
 githubUrl: "https://github.com/julianzanetti/PendingTask-Web"
 featured: true
 ---
