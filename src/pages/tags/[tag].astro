@@ -30,9 +30,9 @@ const filteredCourses = allProjects.filter((project) =>
 );
 ---
 
-<html lang="es">
+<html lang="en">
   <head>
-    <title>Cursos y Proyectos con {tag} | Julián Zanetti</title>
+    <title>Courses and Projects with {tag} | Julián Zanetti</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/icono.png" />
@@ -43,11 +43,11 @@ const filteredCourses = allProjects.filter((project) =>
     <main class="flex-grow">
       <section class="py-20 px-6 max-w-6xl mx-auto">
         <h1 class="text-3xl font-bold text-primary mb-8 text-center">
-          Proyectos con {tag}
+          Projects with {tag}
         </h1>
 
         {filteredProjects.length === 0 ? (
-          <p class="text-center text-gray-400">No se encontraron proyectos con esta tecnología.</p>
+          <p class="text-center text-gray-400">No projects were found with this technology.</p>
         ) : (
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map(({ slug, data }) => (
@@ -65,7 +65,7 @@ const filteredCourses = allProjects.filter((project) =>
                   ))}
                 </div>
                 <a href={`/projects/${slug}`} class="block mt-2 text-primary underline text-sm hover:text-[#a29bfe] transition">
-                  Ver más
+                  View More
                 </a>
               </div>
             ))}
@@ -73,11 +73,11 @@ const filteredCourses = allProjects.filter((project) =>
         )}
 
         <h1 class="text-3xl font-bold text-primary mb-8 text-center mt-16">
-          Cursos con {tag}
+          Courses with {tag}
         </h1>
 
         {filteredCourses.length === 0 ? (
-          <p class="text-center text-gray-400">No se encontraron cursos con esta tecnología.</p>
+          <p class="text-center text-gray-400">No courses were found with this technology.</p>
         ) : (
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredCourses.map(({ slug, data }) => (
@@ -95,7 +95,7 @@ const filteredCourses = allProjects.filter((project) =>
                   ))}
                 </div>
                 <a href={`/projects/${slug}`} class="block mt-2 text-primary underline text-sm hover:text-[#a29bfe] transition">
-                  Ver más
+                  View More
                 </a>
               </div>
             ))}

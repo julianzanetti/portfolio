@@ -1,6 +1,6 @@
 ---
 title: "Pending Task"
-description: "Aplicación web hecha con Django y Python, con base de datos PostgreSQL. Totalmente dockerizada y desplegada con manifiestos de Kubernetes."
+description: "Web application built with Django and Python, using a PostgreSQL database. Fully dockerized and deployed with Kubernetes manifests."
 technologies:
   - Python
   - Django
@@ -16,59 +16,59 @@ featured: true
 
 # 💻 Pending Task
 
-**Pending Task** es una aplicación web moderna y funcional desarrollada con **Django** y **Python**, que utiliza una base de datos **PostgreSQL** para gestionar tareas pendientes. La aplicación está completamente dockerizada y preparada para ser desplegada en Kubernetes mediante sus manifiestos.
+**Pending Task** is a modern and functional web application developed with **Django** and **Python**, which uses a **PostgreSQL** database to manage pending tasks. The application is fully dockerized and ready to be deployed on Kubernetes using its manifests.
 
 ---
 
-## 🚀 Características principales
+## 🚀 Key features
 
-- Gestión eficiente de tareas pendientes (CRUD completo)  
-- Backend robusto con Django y PostgreSQL  
-- Contenedorización con Docker para facilitar despliegues y desarrollo  
-- Orquestación y despliegue en Kubernetes usando manifiestos YAML  
-- Configuración optimizada para entornos de producción y desarrollo  
-- Código modular y escalable  
+- Efficient task management (full CRUD)
+- Robust backend with Django and PostgreSQL
+- Containerization with Docker for easy deployment and development
+- Orchestration and deployment in Kubernetes using YAML manifests
+- Optimized configuration for production and development environments
+- Modular and scalable code  
 
 ---
 
-## 🛠 Tecnologías utilizadas
+## 🛠 Technologies used
 
-- 🐍 **Python**  
-- 🌐 **Django**  
-- 🐘 **PostgreSQL**  
-- 🐳 **Docker**  
-- ☸️ **Kubernetes**  
+- 🐍 **Python**
+- 🌐 **Django**
+- 🐘 **PostgreSQL**
+- 🐳 **Docker**
+- ☸️ **Kubernetes**
 - 🐚 **Bash / Shell scripting** 
 
 ---
 
-## 🌐 Demo en vivo
+## 🌐 Live demo
 
-👉 [Ver demostración en directo](https://pendingtask.julianzanetti-lab.com/)
-
----
-
-## 🎯 Objetivo del proyecto
-
-El objetivo de **Pending Task** es ofrecer una solución práctica y escalable para la gestión de tareas, aplicando buenas prácticas de desarrollo backend, contenedorización y despliegue en Kubernetes.
-
-Este proyecto también refleja mi capacidad para desarrollar aplicaciones web completas y llevarlas a producción con tecnologías modernas de DevOps.
+👉 [Watch live demo](https://pendingtask.julianzanetti-lab.com/)
 
 ---
 
-## 📂 Estructura del proyecto
+## 🎯 Project objective
 
-- Código fuente Django con configuración modular  
-- Dockerfile para construir la imagen de la aplicación  
-- Manifiestos Kubernetes para despliegue (Deployment, Service, ConfigMap, Secret)  
-- Archivos de configuración para la base de datos PostgreSQL  
+The objective of **Pending Task** is to offer a practical and scalable solution for task management, applying best practices in backend development, containerization, and deployment in Kubernetes.
 
----
-
-## 📬 Contacto
-
-Si querés saber más o charlar sobre el proyecto, desarrollo web, Docker o Kubernetes, ¡no dudes en contactarme! 💬
+This project also reflects my ability to develop complete web applications and bring them to production using modern DevOps technologies.
 
 ---
 
-*Desarrollado por Julián Zanetti*
+## 📂 Project structure
+
+- Django source code with modular configuration
+- Dockerfile to build the application image
+- Kubernetes manifests for deployment (Deployment, Service, ConfigMap, Secret)
+- Configuration files for the PostgreSQL database  
+
+---
+
+## 📬 Contact
+
+If you want to know more or chat about the project, web development, Docker, or Kubernetes, don't hesitate to contact me! 💬
+
+---
+
+*Developed by Julián Zanetti*

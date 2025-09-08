@@ -15,9 +15,9 @@ const cursosEnProgreso = allItems.filter(
 );
 ---
 
-<html lang="es">
+<html lang="en">
   <head>
-    <title>Cursos | Julián Zanetti</title>
+    <title>Courses | Julián Zanetti</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/icono.png" />
@@ -25,11 +25,11 @@ const cursosEnProgreso = allItems.filter(
   <body class="bg-[#0d0a2d] text-white flex flex-col min-h-screen">
     <NavBar />
     <main class="flex-grow py-20 px-6 max-w-6xl mx-auto">
-      <h1 class="text-4xl font-bold text-primary text-center mb-16">Cursos</h1>
+      <h1 class="text-4xl font-bold text-primary text-center mb-16">Courses</h1>
 
       {cursosFinalizados.length > 0 && (
         <section class="relative mb-16">
-          <h2 class="text-2xl font-bold text-primary mb-4">Finalizados</h2>
+          <h2 class="text-2xl font-bold text-primary mb-4">Completed</h2>
 
           <button
             id="finalizados-prev"
@@ -67,7 +67,7 @@ const cursosEnProgreso = allItems.filter(
                     href={`/projects/${slug}`}
                     class="block mt-4 text-primary underline text-sm hover:text-[#a29bfe] transition"
                   >
-                    Ver más
+                    View More
                   </a>
                 </div>
               </div>
@@ -78,7 +78,7 @@ const cursosEnProgreso = allItems.filter(
 
       {cursosEnProgreso.length > 0 && (
         <section class="relative">
-          <h2 class="text-2xl font-bold text-primary mb-4">En progreso</h2>
+          <h2 class="text-2xl font-bold text-primary mb-4">In progress</h2>
 
           <button
             id="enprogreso-prev"
@@ -116,7 +116,7 @@ const cursosEnProgreso = allItems.filter(
                     href={`/projects/${slug}`}
                     class="block mt-4 text-primary underline text-sm hover:text-[#a29bfe] transition"
                   >
-                    Ver más
+                    View More
                   </a>
                 </div>
               </div>

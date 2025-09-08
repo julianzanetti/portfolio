@@ -1,6 +1,6 @@
 ---
-title: "Mi Portfolio"
-description: "Portfolio hecho en Astro."
+title: "My Portfolio"
+description: "Portfolio created with Astro."
 technologies:
   - Astro
   - Preact
@@ -14,25 +14,22 @@ githubUrl: "https://github.com/julianzanetti/portfolio"
 featured: true
 ---
 
-"Mi Portfolio" es una plantilla web moderna y minimalista creada para contar sobre mi, mostrar todos los proyectos/cursos que estoy realizando y ya he realizado.
+"My Portfolio" is a Modern and minimalistic web template created to tell about me, my courses and projects.
 
-Desarrollado con **Astro** y estilizado con **TailwindCSS**
+Developed with **Astro** and styled with **TailwindCSS**
 
-## Características
-- Diseño responsive y minimalista.
-- Estética en violeta oscuro con blanco.
-- Componentes de interfaz de usuario limpios y reutilizables.
-- Tipografía moderna y jerarquía visual clara
-- Desarrollado con **Astro**
-- Diseñado con **TailwindCSS**.
-
-## Tecnologías utilizadas
-
+## 🚀 Features
+- Responsive and minimalist design.
+- Dark purple and white aesthetic.
+- Clean and reusable user interface components.
+- Modern typography and clear visual hierarchy.
+- Developed with **Astro**.
+- Designed with **TailwindCSS**.
 
 ## 🌐 Demo
-👉 [Ver demostración en directo](aca-iria-el-link-de-mi-futura-web)
+👉 [Watch live demo](https://julianzanetti-lab.com/)
 
 ## 🎯 Objetivo
-El objetivo de **Mi Portfolio** es combinar estilo y funcionalidad en una interfaz limpia que realce el contenido sin abrumar al usuario.
+The goal of **My Portfolio** is to combine style and functionality in a clean interface that enhances the content without overwhelming the user.
 
-🚀 *Desarrollado por Julian Zanetti.*
+🚀 *Developed by Julian Zanetti.*
