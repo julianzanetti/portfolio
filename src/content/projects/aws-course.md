@@ -1,6 +1,6 @@
 ---
-title: "Curso de AWS al completo"
-description: "Curso práctico con mas de 37 secciones y mas de mas de 46 horas de videos en la cual se explica la teoria de cada servicio y se implementa varios ejemplos practicos."
+title: "Course of AWS al completo"
+description: "Practical course with over 37 sections and more than 46 hours of videos explaining the theory behind each service and implementing various practical examples."
 technologies:
   - AWS
 type: "curso"
@@ -11,63 +11,63 @@ githubUrl: "https://github.com/julianzanetti/AWS-Udemy"
 
 # 🚀 AWS al completo
 
-¡Bienvenido a mi repositorio de prácticas del curso **Amazon AWS al completo**! 🎓
+Welcome to my repository of exercises for the **Complete Amazon AWS** course! 🎓
 
-En este repo encontrarás todas las prácticas y ejercicios realizados durante un curso intensivo que cubre desde conceptos básicos hasta avanzados en Amazon Web Services (AWS), aplicados en escenarios reales para consolidar el aprendizaje. ☁️
-
----
-
-## 🎯 Objetivos del curso
-
-- Comprender los fundamentos y servicios clave de AWS 🛠️  
-- Gestionar instancias EC2 y almacenamiento S3  
-- Configurar redes VPC, subnets y seguridad con Security Groups y NACLs  
-- Trabajar con bases de datos gestionadas (RDS, DynamoDB)  
-- Implementar balanceadores de carga y Auto Scaling  
-- Configurar monitoreo y alertas con CloudWatch  
-- Automatizar tareas con AWS Lambda y AWS CLI  
-- Gestionar identidades y accesos con IAM  
-- Desplegar infraestructuras seguras y escalables  
+In this repository, you will find all the practical exercises and assignments completed during an intensive course covering basic to advanced concepts in Amazon Web Services (AWS), applied in real-world scenarios to consolidate learning. ☁️
 
 ---
 
-## 🔍 Temas y prácticas realizadas
+## 🎯 Course objectives
 
-- Creación y gestión de instancias EC2  
-- Configuración y administración de buckets S3  
-- Diseño y despliegue de VPCs, subnets y tablas de rutas  
-- Definición y aplicación de Security Groups para control de acceso  
-- Implementación de Auto Scaling para escalabilidad automática  
-- Configuración y uso de Load Balancers (Classic, Application, Network)  
-- Gestión de usuarios, roles y permisos con IAM  
-- Monitorización y alertas mediante CloudWatch  
-- Despliegue y configuración de bases de datos RDS  
-- Automatización de procesos con AWS Lambda  
-- Uso de Elastic IPs y NAT Gateways para conectividad segura  
-- Administración de snapshots y backups  
-- Gestión de snapshots y restauraciones  
-- Configuración de políticas de seguridad y mejores prácticas  
-- Trabajo con CloudFormation y plantillas para IaC básica  
-- Uso de AWS CLI para administración avanzada  
-- Configuración de buckets S3 con políticas de acceso y versionado  
-- Configuración de alarmas y métricas personalizadas  
-- Integración de servicios AWS para arquitecturas completas  
-- Configuración y despliegue de aplicaciones web en AWS  
-- Manejo y optimización de costos en AWS  
-- Implementación de alta disponibilidad y recuperación ante desastres  
+- Understand the fundamentals and key services of AWS 🛠️
+- Manage EC2 instances and S3 storage
+- Configure VPC networks, subnets, and security with Security Groups and NACLs
+- Work with managed databases (RDS, DynamoDB)  
+- Implement load balancers and Auto Scaling
+- Configure monitoring and alerts with CloudWatch
+- Automate tasks with AWS Lambda and AWS CLI
+- Manage identities and access with IAM
+- Deploy secure and scalable infrastructures  
 
 ---
 
-## 🧠 Aprendizajes clave
+## 🔍 Topics and exercises covered
 
-Este proyecto me permitió adquirir una visión integral sobre AWS y sus servicios principales, consolidando habilidades prácticas para gestionar infraestructura en la nube de forma segura y escalable. Tambien me esta ayudando para obtener la certificacion de Solutions Architect.
+- Creation and management of EC2 instances
+- Configuration and administration of S3 buckets
+- Design and deployment of VPCs, subnets, and route tables
+- Definition and application of Security Groups for access control
+- Implementation of Auto Scaling for automatic scalability
+- Configuration and use of Load Balancers (Classic, Application, Network)  
+- Management of users, roles, and permissions with IAM  
+- Monitoring and alerts using CloudWatch  
+- Deployment and configuration of RDS databases  
+- Process automation with AWS Lambda  
+- Use of Elastic IPs and NAT Gateways for secure connectivity  
+- Snapshot and backup management  
+- Snapshot and restore management  
+- Configuration of security policies and best practices  
+- Working with CloudFormation and templates for basic IaC  
+- Use of AWS CLI for advanced administration  
+- Configuring S3 buckets with access policies and versioning  
+- Configuring alarms and custom metrics  
+- Integrating AWS services for complete architectures  
+- Configuring and deploying web applications on AWS  
+- Managing and optimising costs on AWS  
+- Implementing high availability and disaster recovery  
 
 ---
 
-## 🏆 Certificado de finalización
+## 🧠 Key learnings
+
+This project allowed me to gain a comprehensive understanding of AWS and its core services, consolidating practical skills to manage cloud infrastructure securely and scalably. It is also helping me to obtain Solutions Architect certification.
 
 ---
 
-## 📬 Contacto
+## 🏆 Certificate of completion
 
-Si querés conversar sobre AWS, cloud computing o tecnología en general, ¡no dudes en contactarme! 💬
+---
+
+## 📬 Contact
+
+If you would like to discuss AWS, cloud computing, or technology in general, please do not hesitate to contact me! 💬

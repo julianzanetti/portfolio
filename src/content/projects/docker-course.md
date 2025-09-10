@@ -1,6 +1,6 @@
 ---
-title: "Curso de Docker"
-description: "Curso práctico de 10 secciones y mas de 23 horas de videos."
+title: "Docker Course"
+description: "Practical course consisting of 10 sections and over 23 hours of videos."
 technologies:
   - Docker
   - Docker Compose
@@ -14,26 +14,26 @@ githubUrl: "https://github.com/julianzanetti/Docker-Udemy"
 
 # 🚀 Docker, Docker Compose y Swarm
 
-¡Bienvenido a mi repositorio de prácticas del curso **Docker**! 🎓
+Welcome to my repository of exercises for the **Docker** course! 🎓
 
-Aquí encontrarás todos los ejercicios y proyectos realizados durante un curso intensivo donde aprendí a dominar la creación, gestión y orquestación de contenedores con **Docker**. 🐳
-
----
-
-## 🎯 Objetivos del curso
-
-- Entender los fundamentos de la contenerización y Docker 🛠️  
-- Crear y administrar imágenes y contenedores de Docker  
-- Trabajar con Dockerfiles para construir imágenes personalizadas  
-- Gestionar redes y volúmenes en Docker para aplicaciones complejas  
-- Usar Docker Compose para orquestar múltiples contenedores  
-- Optimizar imágenes para producción y entender buenas prácticas  
-- Integrar Docker con entornos de desarrollo y producción  
-- Realizar despliegues básicos y debugging de contenedores  
+Here you will find all the exercises and projects completed during an intensive course where I learned to master the creation, management, and orchestration of containers with **Docker**. 🐳
 
 ---
 
-## 📚 Tecnologías usadas
+## 🎯 Course objectives
+
+- Understand the fundamentals of containerisation and Docker 🛠️
+- Create and manage Docker images and containers
+- Work with Dockerfiles to build custom images
+- Manage networks and volumes in Docker for complex applications  
+- Use Docker Compose to orchestrate multiple containers
+- Optimise images for production and understand best practices
+- Integrate Docker with development and production environments
+- Perform basic deployments and debugging of containers 
+
+---
+
+## 📚 Technologies used
 
 - 🐳 **Docker**  
 - 🐧 **Linux / Bash**  
@@ -41,31 +41,31 @@ Aquí encontrarás todos los ejercicios y proyectos realizados durante un curso 
 
 ---
 
-## 🔍 Temas y prácticas realizadas
+## 🔍 Topics and practices carried out
 
-- Instalación y configuración de Docker en Linux  
-- Construcción de imágenes con Dockerfile  
-- Gestión y manipulación de contenedores  
-- Uso de volúmenes para persistencia de datos  
-- Configuración de redes entre contenedores  
-- Orquestación básica con Docker Compose  
-- Construcción y despliegue de aplicaciones multi-contenedor  
-- Limpieza y optimización de imágenes y contenedores  
-
----
-
-## 🧠 Aprendizajes clave
-
-Este proyecto me permitió entender la contenerización y el flujo de trabajo con Docker, sentando bases sólidas para mi camino en DevOps y despliegues en la nube.
+- Installing and configuring Docker on Linux  
+- Building images with Dockerfile
+- Container management and manipulation
+- Using volumes for data persistence
+- Configuring networks between containers
+- Basic orchestration with Docker Compose
+- Building and deploying multi-container applications
+- Cleaning and optimising images and containers  
 
 ---
 
-## 🏆 Certificado de finalización
+## 🧠 Key learnings
+
+This project allowed me to understand containerisation and workflow with Docker, laying a solid foundation for my journey into DevOps and cloud deployments.
+
+---
+
+## 🏆 Certificate of completion
 
 ![image](https://github.com/julianzanetti/Docker-Udemy/assets/134458575/83b38059-123a-458b-8d4d-e8616209a324)
 
 ---
 
-## 📬 Contacto
+## 📬 Contact
 
-Si querés charlar sobre Docker, contenedores o tecnología en general, ¡no dudes en contactarme! 💬
+If you would like to discuss Docker, containers, or technology in general, please do not hesitate to contact me! 💬

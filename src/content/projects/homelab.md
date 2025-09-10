@@ -14,7 +14,7 @@ technologies:
   - Loki
   - GitHub Actions
 type: "proyecto"
-cover: "/images/portfolio.png"
+cover: "/images/homepage.png"
 githubUrl: "https://github.com/julianzanetti/homelab"
 featured: true
 ---
